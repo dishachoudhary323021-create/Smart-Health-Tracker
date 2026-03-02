@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Health Tracker Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Smart Health Tracker Pro</h1>
+<h3 id="welcome"></h3>
+
+<button onclick="toggleMode()">Dark Mode</button>
+<button onclick="logout()">Logout</button>
+
+<hr>
+
+<h2>BMI Calculator</h2>
+<input type="number" id="height" placeholder="Height (meters)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<button onclick="calculateBMI()">Calculate BMI</button>
+<p id="bmiResult"></p>
+<p id="exerciseTip"></p>
+
+<hr>
+
+<h2>Diet Recommendation</h2>
+<button onclick="showDiet()">Generate Diet Plan</button>
+<p id="dietResult"></p>
+
+<hr>
+
+<h2>Water Intake Tracker</h2>
+<input type="number" id="waterWeight" placeholder="Weight (kg)">
+<button onclick="calculateWater()">Calculate</button>
+<p id="waterResult"></p>
+
+<progress id="waterProgress" value="0" max="3"></progress>
+
+<button onclick="startReminder()">Start Water Reminder</button>
+
+<hr>
+
+<h2>Calorie Calculator</h2>
+<input type="number" id="age" placeholder="Age">
+<select id="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
+<input type="number" id="calWeight" placeholder="Weight (kg)">
+<input type="number" id="calHeight" placeholder="Height (cm)">
+<button onclick="calculateCalories()">Calculate</button>
+<p id="calorieResult"></p>
+
+<hr>
+
+<h2>Health Tips</h2>
+<p id="tipBox"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

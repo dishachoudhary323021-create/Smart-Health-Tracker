@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Smart Health Tracker Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Create Account</h1>
+
+    <input type="text" id="regUser" placeholder="Username">
+    <input type="password" id="regPass" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+    <p id="msg"></p>
+
+    <a href="login.html">Already have account? Login</a>
+</div>
+
+<script>
+function register(){
+    let u = regUser.value;
+    let p = regPass.value;
+
+    localStorage.setItem("username", u);
+    localStorage.setItem("password", p);
+
+    msg.innerText = "Registration Successful!";
+}
+</script>
+
+</body>
+</html>
