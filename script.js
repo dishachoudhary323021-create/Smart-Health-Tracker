@@ -78,7 +78,7 @@ function toggleMode(){
 }
 
 function logout(){
-    window.location="login.html";
+    window.location="dashboard.html";
 }
 
 // -------- Auto Health Tips --------
