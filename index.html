@@ -1,3 +1,7 @@
+<h1 style="text-align:center; color:#4CAF50;">
+ Smart Health Tracker Dashboard
+</h1>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +19,15 @@
 <button onclick="logout()">Logout</button>
 
 <hr>
+<div style="background:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
+
 
 <h2>BMI Calculator</h2>
 <input type="number" id="height" placeholder="Height (meters)">
 <input type="number" id="weight" placeholder="Weight (kg)">
 <button onclick="calculateBMI()">Calculate BMI</button>
+</div>
+
 <p id="bmiResult"></p>
 <p id="exerciseTip"></p>
 
@@ -30,10 +38,12 @@
 <p id="dietResult"></p>
 
 <hr>
+<div style="background:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
 
 <h2>Water Intake Tracker</h2>
 <input type="number" id="waterWeight" placeholder="Weight (kg)">
 <button onclick="calculateWater()">Calculate</button>
+</div>
 <p id="waterResult"></p>
 
 <progress id="waterProgress" value="0" max="3"></progress>
@@ -41,6 +51,7 @@
 <button onclick="startReminder()">Start Water Reminder</button>
 
 <hr>
+<div style="background:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
 
 <h2>Calorie Calculator</h2>
 <input type="number" id="age" placeholder="Age">
@@ -51,6 +62,7 @@
 <input type="number" id="calWeight" placeholder="Weight (kg)">
 <input type="number" id="calHeight" placeholder="Height (cm)">
 <button onclick="calculateCalories()">Calculate</button>
+</div>
 <p id="calorieResult"></p>
 
 <hr>
@@ -63,3 +75,62 @@
 <script src="script.js"></script>
 </body>
 </html>
+<hr>
+
+<h2>Sample User Data</h2>
+
+<table border="1" style="margin:auto; border-collapse: collapse;">
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Weight</th>
+<th>Height</th>
+<th>BMI</th>
+<th>Water (L)</th>
+<th>Calories</th>
+</tr>
+
+<tr>
+<td>Riya</td>
+<td>20</td>
+<td>50</td>
+<td>1.6</td>
+<td>19.5</td>
+<td>1.6</td>
+<td>1800</td>
+</tr>
+
+<tr>
+<td>Aman</td>
+<td>21</td>
+<td>70</td>
+<td>1.75</td>
+<td>22.8</td>
+<td>2.3</td>
+<td>2200</td>
+</tr>
+
+<tr>
+<td>Neha</td>
+<td>19</td>
+<td>60</td>
+<td>1.65</td>
+<td>22.0</td>
+<td>2.0</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>Rahul</td>
+<td>22</td>
+<td>80</td>
+<td>1.8</td>
+<td>24.6</td>
+<td>2.6</td>
+<td>2500</td>
+</tr>
+
+</table>
+
+<p>This data demonstrates how the system processes user inputs.</p>
+
