@@ -1,10 +1,11 @@
 document.getElementById("welcome").innerText =
 "Welcome " + localStorage.getItem("loggedInUser");
 
-// -------- BMI --------
 function calculateBMI(){
-    let h = height.value;
-    let w = weight.value;
+
+
+    let h = document.getElementById("height").value;
+    let w = document.getElementById("weight").value;
 
     let bmi = w/(h*h);
     let category="";
@@ -23,21 +24,37 @@ function calculateBMI(){
         exercise="Cardio 30 mins daily recommended.";
     }
 
-    bmiResult.innerText="BMI: "+bmi.toFixed(2)+" ("+category+")";
-    exerciseTip.innerText=exercise;
+    document.getElementById("bmiResult").innerText = "BMI: " + bmi.toFixed(2) + " ("+category+")";
+    document.getElementById("exerciseTip").innerText = exercise;
+
+    // 🔥 DIET LOGIC
+    let dietText = "";
+
+    if(bmi < 18.5){
+        dietText = `
+        <b>Breakfast:</b> Milk + Banana + Peanut Butter <br>
+        <b>Lunch:</b> Rice + Dal + Paneer <br>
+        <b>Dinner:</b> Roti + Vegetables + Curd
+        `;
+    }
+    else if(bmi < 24.9){
+        dietText = `
+        <b>Breakfast:</b> Oats + Fruits <br>
+        <b>Lunch:</b> Roti + Dal + Sabzi <br>
+        <b>Dinner:</b> Salad + Soup
+        `;
+    }
+    else{
+        dietText = `
+        <b>Breakfast:</b> Green Tea + Fruits <br>
+        <b>Lunch:</b> Brown Rice + Vegetables <br>
+        <b>Dinner:</b> Salad + Soup (Light Meal)
+        `;
+    }
+
+    document.getElementById("dietPlan").innerHTML = dietText;
 }
 
-// -------- Diet --------
-function showDiet(){
-    let diets=[
-        "Breakfast: Oats + Fruits | Lunch: Dal + Rice | Dinner: Salad",
-        "Breakfast: Eggs + Milk | Lunch: Roti + Sabzi | Dinner: Soup",
-        "Breakfast: Smoothie | Lunch: Grilled Veggies | Dinner: Khichdi"
-    ];
-
-    let random=diets[Math.floor(Math.random()*diets.length)];
-    dietResult.innerText=random;
-}
 
 // -------- Water --------
 function calculateWater(){
@@ -78,7 +95,7 @@ function toggleMode(){
 }
 
 function logout(){
-    window.location="dashboard.html";
+    window.location="login.html";
 }
 
 // -------- Auto Health Tips --------
@@ -95,3 +112,5 @@ setInterval(function(){
     document.getElementById("tipBox").innerText=tips[i];
     i=(i+1)%tips.length;
 },4000);
+
+
