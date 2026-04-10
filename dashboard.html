@@ -1,17 +1,3 @@
-<h1 style="text-align:center; color:#4CAF50;">
- Smart Health Tracker Dashboard
-</h1>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Smart Health Tracker Pro</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-
 <h1>Smart Health Tracker Pro</h1>
 <h3 id="welcome"></h3>
 
@@ -23,19 +9,21 @@
 
 
 <h2>BMI Calculator</h2>
+
 <input type="number" id="height" placeholder="Height (meters)">
 <input type="number" id="weight" placeholder="Weight (kg)">
-<button onclick="calculateBMI()">Calculate BMI</button>
-</div>
 
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<!-- ✅ ADD THESE -->
 <p id="bmiResult"></p>
 <p id="exerciseTip"></p>
 
 <hr>
 
 <h2>Diet Recommendation</h2>
-<button onclick="showDiet()">Generate Diet Plan</button>
-<p id="dietResult"></p>
+<p id="dietPlan"></p>
+
 
 <hr>
 <div style="background:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
